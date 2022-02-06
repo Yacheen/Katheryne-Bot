@@ -18,3 +18,6 @@ client.on("ready", (c) => {
         status: "online",
     });
 });
+client.once("message", (messageSent) => {
+    messageSent.channel.send(`Hello, ${messageSent.author}!`);
+});
